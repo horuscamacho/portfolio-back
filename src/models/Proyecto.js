@@ -4,6 +4,7 @@ module.exports = (sequelize) => {
     sequelize.define('proyecto', {
         id: {
             type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
         },

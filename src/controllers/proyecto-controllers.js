@@ -2,6 +2,9 @@ const {Proyecto} = require('./../db')
 const cloudinary = require('./cloudinary')
 const newProject = async (req, res) => {
     const {name, description, image} = req.body
+    console.log("NAME", name)
+    console.log("DESCRIPTION", description)
+    console.log("IMAGE", image)
     try{
         const result = await cloudinary.uploader.upload(image, {
             folder: "proyectos"

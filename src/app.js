@@ -52,6 +52,10 @@ app.post('/login', async (req, res, next) => {
     })(req, res, next)
 })
 
+app.get("/", (req, res) => {
+    res.status(200).send("Hola")
+})
+
 
 app.use('/', routes)
 
